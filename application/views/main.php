@@ -56,7 +56,7 @@ defined('BASEPATH') OR exit('');
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="<?=base_url()?>" style="margin-top:-15px">
-                    <h1>Andi's Auto Shop Inventory System</h1>
+                    <h3>Andi's Auto Shop Inventory System</h3>
                     </a>
                 </div>
 
