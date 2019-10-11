@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2019 at 03:44 PM
+-- Generation Time: Oct 11, 2019 at 01:52 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.39
 
@@ -51,8 +51,22 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id`, `first_name`, `last_name`, `email`, `mobile1`, `mobile2`, `password`, `role`, `created_on`, `last_login`, `last_seen`, `last_edited`, `account_status`, `deleted`) VALUES
 (1, 'Admin', 'Demo', 'demo@1410inc.xyz', '08021111111', '07032222222', '$2y$10$xv9I14OlR36kPCjlTv.wEOX/6Dl7VMuWCl4vCxAVWP1JwYIaw4J2C', 'Super', '2017-01-04 22:19:16', '2019-10-07 09:02:33', '2018-05-18 17:28:09', '2019-10-07 01:02:33', '1', '0'),
-(2, 'Admin', 'Admin', 'admin', '09177086840', '', '$2y$10$M6wJc/ADnF8k5kdV0.7gG.ZIgxdfOcdiJOKEkQQfkJxsh6.lkpMpa', 'Super', '2019-10-07 09:07:43', '2019-10-07 20:56:25', '2019-10-07 21:39:03', '2019-10-07 13:39:03', '1', '0'),
+(2, 'Admin', 'Admin', 'admin', '09177086840', '', '$2y$10$M6wJc/ADnF8k5kdV0.7gG.ZIgxdfOcdiJOKEkQQfkJxsh6.lkpMpa', 'Super', '2019-10-07 09:07:43', '2019-10-11 18:48:50', '2019-10-11 19:52:05', '2019-10-11 11:52:05', '1', '0'),
 (3, 'Basic', 'Basic', 'basic', '09123123123123', '', '$2y$10$O65qf16fja8ozpiSn8OAiuljy3dZJGQAdMx5bGJGJI5edQq73EPGC', 'Basic', '2019-10-07 09:10:49', '2019-10-07 09:13:26', '2019-10-07 09:14:39', '2019-10-07 01:14:39', '1', '0');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `discount_log`
+--
+
+CREATE TABLE `discount_log` (
+  `id` int(32) NOT NULL,
+  `amount` decimal(16,2) NOT NULL,
+  `staffId` int(32) NOT NULL,
+  `transId` varchar(32) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -147,6 +161,12 @@ ALTER TABLE `admin`
   ADD UNIQUE KEY `mobile1` (`mobile1`);
 
 --
+-- Indexes for table `discount_log`
+--
+ALTER TABLE `discount_log`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `eventlog`
 --
 ALTER TABLE `eventlog`
@@ -177,22 +197,28 @@ ALTER TABLE `admin`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `discount_log`
+--
+ALTER TABLE `discount_log`
+  MODIFY `id` int(32) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `eventlog`
 --
 ALTER TABLE `eventlog`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `transId` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `transId` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
