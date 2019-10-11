@@ -86,7 +86,7 @@ defined('BASEPATH') OR exit('');
             <b>Customer Name: <?=$cust_name?></b>
         </div>
     </div>
-    <div class="row">
+    <div class="row hidden">
         <div class="col-xs-12">
             <b>Customer Phone: <?=$cust_phone?></b>
         </div>
