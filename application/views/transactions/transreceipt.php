@@ -1,14 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('');
-?>P
+?>
 <?php if($allTransInfo):?>
 <?php $sn = 1; ?>
 <div id="transReceiptToPrint">
     <div class="row">
         <div class="col-xs-12 text-center text-uppercase">
-            <center style='margin-bottom:5px'><img src="<?=base_url()?>public/images/receipt_logo.png" alt="logo" class="img-responsive" width="60px"></center>
-            <b>1410 Store, plot 5, block 2</b>
-            <div>+234 7086201801, +234 7030167606</div>
+            <b>Andi's Auto Shop</b>
+            <div>045 985 XXXX</div>
         </div>
     </div>
     <div class="row text-center">
@@ -92,7 +91,7 @@ defined('BASEPATH') OR exit('');
             <b>Customer Phone: <?=$cust_phone?></b>
         </div>
     </div>
-    <div class="row">
+    <div class="row hidden">
         <div class="col-xs-12">
             <b>Customer Email: <?=$cust_email?></b>
         </div>
