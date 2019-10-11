@@ -82,7 +82,7 @@ defined('BASEPATH') OR exit('');
     </div>
     <hr style='margin-top:5px; margin-bottom:0px'>
     <div class="row margin-top-5">
-        <div class="col-xs-12">
+        <div class="col-xs-12 hidden">
             <b>Customer Name: <?=$cust_name?></b>
         </div>
     </div>
