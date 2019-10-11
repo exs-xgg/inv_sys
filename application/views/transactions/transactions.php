@@ -78,35 +78,35 @@ if(isset($items) && !empty($items)){
                                     <div class="row">
                                         <div class="col-sm-3 form-group-sm">
                                             <label for="cumAmount">Cumulative Amount</label>
-                                            <span id="cumAmount" class="form-control" style="font-weight: bold; font-size: 30px; padding: 2px">0.00</span>
+                                            <span id="cumAmount" class="form-control" style="height: 45px; font-weight: bold; font-size: 30px; padding: 2px">0.00</span>
                                         </div>
                                         <div class="col-sm-3 form-group-sm">
                                             <label for="discount">Discount(value)</label>
-                                            <input type="number" min="0" id="discountValue" class="form-control" value="0">
+                                            <input type="number" min="0" id="discountValue" class="form-control"  style="height: 45px; font-weight: bold; font-size: 30px; padding: 2px" value="0">
                                         </div>
                                         <div class="col-sm-3 form-group-sm">
                                             <div class="cashAndPos hidden">
                                                 <label for="cashAmount">Cash</label>
-                                                <input type="text" class="form-control" id="cashAmount">
+                                                <input type="text" class="form-control"  style="height: 45px; font-weight: bold; font-size: 30px; padding: 2px" id="cashAmount">
                                                 <span class="help-block errMsg"></span>
                                             </div>
 
                                             <div class="cashAndPos hidden">
                                                 <label for="posAmount">POS</label>
-                                                <input type="text" class="form-control" id="posAmount">
+                                                <input type="text" class="form-control"  style="height: 45px; font-weight: bold; font-size: 30px; padding: 2px" id="posAmount">
                                                 <span class="help-block errMsg"></span>
                                             </div>
 
                                             <div id="amountTenderedDiv">
                                                 <label for="amountTendered" id="amountTenderedLabel">Amount Tendered</label>
-                                                <input type="text" class="form-control" id="amountTendered">
+                                                <input type="text" class="form-control"  style="height: 45px; font-weight: bold; font-size: 30px; padding: 2px" id="amountTendered">
                                                 <span class="help-block errMsg" id="amountTenderedErr"></span>
                                             </div>
                                         </div>
                                         
                                         <div class="col-sm-3 form-group-sm">
                                             <label for="changeDue">Change Due</label>
-                                            <span class="form-control" id="changeDue"></span>
+                                            <span class="form-control"  style="height: 45px; font-weight: bold; font-size: 30px; padding: 2px" id="changeDue"></span>
                                         </div>
                                     </div>
                                         
