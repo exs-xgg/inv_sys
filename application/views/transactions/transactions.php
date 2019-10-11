@@ -73,7 +73,8 @@ if(isset($items) && !empty($items)){
                                         
                                         
                                         
-                                            <select  class="form-control hidden checkField " id="modeOfPayment" value="Cash"><option value="Cash">Cash</option></select>
+                                            <select  class="form-control checkField " id="modeOfPayment" value="Cash"><option value="Cash">Cash</option></select>
+                                            <span class="help-block errMsg" id="modeOfPaymentErr"></span>
                                         
                                     <div class="row">
                                         <div class="col-sm-3 form-group-sm">

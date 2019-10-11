@@ -333,7 +333,7 @@ $(document).ready(function(){
         //ensure all fields are properly filled
         var amountTendered = parseFloat($("#amountTendered").val());
         var changeDue = $("#changeDue").html();
-        var modeOfPayment = $("#modeOfPayment").val();
+        var modeOfPayment = "Cash";
         var cumAmount = parseFloat($("#cumAmount").html());
         var arrToSend = [];
         var vatPercentage = $("#vat").val();
