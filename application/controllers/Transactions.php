@@ -114,7 +114,6 @@ class Transactions extends CI_Controller{
             //will insert info into db and return transaction's receipt
             $returnedData = $this->insertTrToDb($arrOfItemsDetails, $_mop, $_at, $cumAmount, $_cd, $this->vat_amount, $vatPercentage, $this->discount_amount, 
                     $discount_percentage, $cust_name, $cust_phone, $cust_email);
-            
             $json['status'] = $returnedData ? 1 : 0;
             $json['msg'] = $returnedData ? "Transaction successfully processed" : 
                     "Unable to process your request at this time. Pls try again later "
@@ -271,7 +270,15 @@ class Transactions extends CI_Controller{
             $transId = $this->transaction->add($itemName, $itemCode, "", $qtySold, $unitPrice, $totalPrice, $cumAmount, $_at, $_cd, 
                     $_mop, 1, $ref, $vatAmount, $vatPercentage, $discount_amount, $discount_percentage, $cust_name, $cust_phone, 
                     $cust_email);
+
+            //DISCOUNT LOG
+            $conn = mysqli_connect("localhost","root","","1410inventory");
+            $conn->query("INSERT into discount_log (amount,staffId,transId) values (" .$this->discount_amount ."," . $this->session->admin_id . ",'" . $ref . "')" );
+           
             
+
+
+
             $allTransInfo[$transId] = ['itemName'=>$itemName, 'quantity'=>$qtySold, 'unitPrice'=>$unitPrice, 'totalPrice'=>$totalPrice];
             
             //update item quantity in db by removing the quantity bought

@@ -161,3 +161,10 @@ body{
 .custom-active{
     background-color: #333;
 }
+.form-group-sm .form-control {
+  height: 40px;
+  padding: 5px 10px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: 3px;
+}

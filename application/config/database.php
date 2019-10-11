@@ -78,7 +78,7 @@ $db['mysql'] = array(
 	'dsn'	=> 'mysql:hostname=localhost; dbname=1410inventory',
 	'hostname' => '',
 	'username' => 'root',
-	'password' => 'root',
+	'password' => '',
 	'database' => '',
 	'dbdriver' => 'pdo',
 	'dbprefix' => '',

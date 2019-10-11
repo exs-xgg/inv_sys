@@ -67,41 +67,24 @@ if(isset($items) && !empty($items)){
                                     <!-- End of text to click to add another item to transaction-->
                                     <br>
                                     
+                                            <input type="number" min="0" id="vat" class="form-control hidden " value="0">
+                                        
+                                            <input type="number" min="0" id="discount" class="form-control hidden " value="0" >
+                                        
+                                        
+                                        
+                                            <select  class="form-control hidden checkField " id="modeOfPayment" value="Cash"><option value="Cash">Cash</option></select>
+                                        
                                     <div class="row">
                                         <div class="col-sm-3 form-group-sm">
-                                            <label for="vat">VAT(%)</label>
-                                            <input type="number" min="0" id="vat" class="form-control" value="0">
+                                            <label for="cumAmount">Cumulative Amount</label>
+                                            <span id="cumAmount" class="form-control" style="font-weight: bold; font-size: 30px; padding: 2px">0.00</span>
                                         </div>
-                                        
-                                        <div class="col-sm-3 form-group-sm">
-                                            <label for="discount">Discount(%)</label>
-                                            <input type="number" min="0" id="discount" class="form-control" value="0">
-                                        </div>
-                                        
                                         <div class="col-sm-3 form-group-sm">
                                             <label for="discount">Discount(value)</label>
                                             <input type="number" min="0" id="discountValue" class="form-control" value="0">
                                         </div>
-                                        
                                         <div class="col-sm-3 form-group-sm">
-                                            <label for="modeOfPayment">Mode of Payment</label>
-                                            <select class="form-control checkField" id="modeOfPayment">
-                                                <option value="">---</option>
-                                                <option value="Cash">Cash</option>
-                                                <option value="POS">POS</option>
-                                                <option value="Cash and POS">Cash and POS</option>
-                                            </select>
-                                            <span class="help-block errMsg" id="modeOfPaymentErr"></span>
-                                        </div>
-                                    </div>
-                                        
-                                    <div class="row">
-                                        <div class="col-sm-4 form-group-sm">
-                                            <label for="cumAmount">Cumulative Amount</label>
-                                            <span id="cumAmount" class="form-control">0.00</span>
-                                        </div>
-                                        
-                                        <div class="col-sm-4 form-group-sm">
                                             <div class="cashAndPos hidden">
                                                 <label for="cashAmount">Cash</label>
                                                 <input type="text" class="form-control" id="cashAmount">
@@ -121,7 +104,7 @@ if(isset($items) && !empty($items)){
                                             </div>
                                         </div>
                                         
-                                        <div class="col-sm-4 form-group-sm">
+                                        <div class="col-sm-3 form-group-sm">
                                             <label for="changeDue">Change Due</label>
                                             <span class="form-control" id="changeDue"></span>
                                         </div>
@@ -138,23 +121,18 @@ if(isset($items) && !empty($items)){
                                             <input type="tel" id="custPhone" class="form-control" placeholder="Phone Number">
                                         </div>
                                         
-                                        <div class="col-sm-4 form-group-sm">
-                                            <label for="custEmail">Customer Email</label>
-                                            <input type="email" id="custEmail" class="form-control" placeholder="E-mail Address">
-                                        </div>
+                                            <input type="email" id="custEmail" class="form-control hidden" placeholder="E-mail Address" value="">
                                     </div>
                                 </div>
                             </div>
 
                             <br>
                             <div class="row">
-                                <div class="col-sm-2 form-group-sm">
-                                    <button class="btn btn-primary btn-sm" id='useScanner'>Use Barcode Scanner</button>
-                                </div>
+                                
                                 <br class="visible-xs">
                                 <div class="col-sm-6"></div>
                                 <br class="visible-xs">
-                                <div class="col-sm-4 form-group-sm">
+                                <div class="col-sm-4 form-group-sm pull-right">
                                     <button type="button" class="btn btn-primary btn-sm" id="confirmSaleOrder">Confirm Order</button>
                                     <button type="button" class="btn btn-danger btn-sm" id="cancelSaleOrder">Clear Order</button>
                                     <button type="button" class="btn btn-danger btn-sm" id="hideTransForm">Close</button>
