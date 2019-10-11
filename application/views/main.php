@@ -86,7 +86,7 @@ defined('BASEPATH') OR exit('');
 
                         <?php if($this->session->admin_role === "Super"):?>
                         
-                        <li class="<?= $pageTitle == 'Employees' ? 'active' : '' ?>">
+                        <!-- <li class="<?= $pageTitle == 'Employees' ? 'active' : '' ?>">
                             <a href="<?= site_url('employees') ?>">
                                 <i class="fa fa-users"></i>
                                 Employees
@@ -105,7 +105,7 @@ defined('BASEPATH') OR exit('');
                                 <i class="fa fa-tasks"></i>
                                 Event Log
                             </a>
-                        </li>
+                        </li> -->
                         
                         <li class="<?= $pageTitle == 'Database' ? 'active' : '' ?>">
                             <a href="<?= site_url('dbmanagement') ?>">
@@ -181,7 +181,7 @@ defined('BASEPATH') OR exit('');
                         </li>
                         
                         
-                        <li class="<?= $pageTitle == 'Employees' ? 'active' : '' ?>">
+                        <!-- <li class="<?= $pageTitle == 'Employees' ? 'active' : '' ?>">
                             <a href="<?= site_url('employees') ?>">
                                 <i class="fa fa-users"></i>
                                 Employees
@@ -198,7 +198,7 @@ defined('BASEPATH') OR exit('');
                                 <i class="fa fa-tasks"></i>
                                 Event Log
                             </a>
-                        </li>
+                        </li> -->
                         
                         <li class="<?= $pageTitle == 'Database' ? 'active' : '' ?>">
                             <a href="<?= site_url('dbmanagement') ?>">
